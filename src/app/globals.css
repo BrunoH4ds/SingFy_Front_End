@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Personalizando a barra de rolagem (removendo) */
+::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Cor do "thumb" da barra de rolagem */
+  border-radius: 5px; /* Bordas arredondadas para o thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Cor de fundo da trilha da barra de rolagem */
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: transparent; /* Cor do botão de navegação da barra de rolagem */
+}
+/*component para a pagina legal*/
+@layer components {
+  .custom-section h1 {
+    @apply text-2xl my-3 font-bold;
+  }
+  .custom-section h2 {
+    @apply text-xl my-2 font-bold ;
+  }
+  .custom-section h3 {
+    @apply text-lg my-1 text-green-500 font-bold ;
+  }
+  .custom-section p {
+    @apply text-base  leading-relaxed;
+  }
+  .custom-section a {
+    @apply text-green-600 hover:text-green-500 transition-colors;
+  }
+  .custom-section ul {
+    @apply list-disc leading-7;
+  }
+  .custom-section table{
+    @apply my-3;
+  }
+  .custom-section th {
+    @apply text-sm bg-green-600 border p-2;
+  }
+  .custom-section td {
+    @apply text-sm border-collapse border p-2;
+  }
+}
