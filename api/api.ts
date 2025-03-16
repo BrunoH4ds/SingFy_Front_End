@@ -1,7 +1,7 @@
 // Fetch ou Axios
 import axios from "axios";
 
-const URL = "http://localhost:3001";
+const URL = process.env.NEXT_PUBLIC_URL_BACKEND;
 
 const responseArtists = await axios.get(`${URL}/artists`);
 const responseSongs = await axios.get(`${URL}/songs`);
